@@ -3,10 +3,10 @@
 
 | # | Tool | Logo | Description |
 |---|---|---|---|
-| 1 | Anaconda | ![anaconda](./images/cropped-Anaconda_horizontal_RGB-1-600x102.png) | 开源 Python 发行版 |
-| 2 | CUDA | ![cuda](./images/NVIDIA-CUDA.png) | 并行语言计算库 |
-| 3 | PyTorch | ![pytorch](./images/pytorch.png) | 深度学习框架 |
-| 4 | PyCharm | ![pycharm](./images/pycharm.png) | Python 开发利器 |
+| 1 | Anaconda | <img src="./images/cropped-Anaconda_horizontal_RGB-1-600x102.png" style="width: 60px;"> | 开源 Python 发行版 |
+| 2 | CUDA | <img src="./images/NVIDIA-CUDA.png" style="width: 60px;"> | 并行语言计算库 |
+| 3 | PyTorch | <img src="./images/pytorch.png" style="width: 60px;"> | 深度学习框架 |
+| 4 | PyCharm | <img src="./images/pycharm.png" style="width: 60px;"> | Python 开发利器 |
 
 ## 2. 开始安装
 ### 2.1 Anaconda
