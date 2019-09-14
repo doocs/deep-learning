@@ -1,12 +1,44 @@
 # PyTorch 环境准备
 ## 1. 开发环境
+<table>
+  <thead>
+    <tr>
+      <th align="center">#</th>
+      <th align="center">Tool</th>
+      <th align="center">Logo</th>
+      <th align="center">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">1</td>
+      <td align="center">Anaconda</td>
+      <td align="center"><div align="center"><img width="200px" src="./images/cropped-Anaconda_horizontal_RGB-1-600x102.png"></img></div></td>
+      <td align="center">开源 Python 发行版</td>
+    </tr>
+    <tr>
+      <td align="center">2</td>
+      <td align="center">CUDA</td>
+      <td align="center"><div align="center"><img width="200px" src="./images/NVIDIA-CUDA.png"></img></div></td>
+      <td align="center">并行语言计算库</td>
+    </tr>
+    <tr>
+      <td align="center">3</td>
+      <td align="center">PyTorch</td>
+      <td align="center"><div align="center"><img width="200px" src="./images/pytorch.png"></img></div></td>
+      <td align="center">深度学习框架</td>
+    </tr>
+    <tr>
+      <td align="center">4</td>
+      <td align="center">PyCharm</td>
+      <td align="center"><div align="center"><img width="200px" src="./images/pycharm.png"></img></div></td>
+      <td align="center">Python 开发利器</td>
+    </tr>
+</table>
 
-| # | Tool | Logo | Description |
-|---|---|---|---|
-| 1 | Anaconda | <img src="./images/cropped-Anaconda_horizontal_RGB-1-600x102.png" style="width: 60px;"> | 开源 Python 发行版 |
-| 2 | CUDA | <img src="./images/NVIDIA-CUDA.png" style="width: 60px;"> | 并行语言计算库 |
-| 3 | PyTorch | <img src="./images/pytorch.png" style="width: 60px;"> | 深度学习框架 |
-| 4 | PyCharm | <img src="./images/pycharm.png" style="width: 60px;"> | Python 开发利器 |
+
+
+
 
 ## 2. 开始安装
 ### 2.1 Anaconda
