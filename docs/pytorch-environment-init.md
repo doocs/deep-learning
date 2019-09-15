@@ -86,7 +86,7 @@ conda 4.7.11
 ### 2.2 CUDA
 接下来我们安装 CUDA。
 
-**注意**，CUDA 执行运行在 NVIDIA 显卡上，因此，在进行 `DeepLearning` 学习的时候，请确保有一张 NVIDIA 显卡。
+**注意**，CUDA 只能运行在 NVIDIA 显卡上，因此，在进行 `DeepLearning` 学习的时候，请确保有一张 NVIDIA 显卡。
 
 我们在装有 NVIDIA 显卡的电脑上安装 NVIDIA 显卡驱动以及统一的并行语言计算库 `CUDA`，通过利用 CUDA 提供的 API，可以很方便地调用计算机硬件资源进行并行计算。
 
@@ -254,47 +254,13 @@ print('Is gpu available?:', torch.cuda.is_available())
 
 发现 CUDA 并不可用。此时打开控制面板查看显卡驱动信息。
 
-![nvidia-control-panel](./images/nvidia-control-panel].png)
+![nvidia-control-panel](./images/nvidia-control-panel.png)
 
-发现本机的显卡驱动是 9.1，需要重新安装 CUDA 9.1 版本。安装完之后，安装 对应的 cuda 版本的 PyTorch：
+发现本机的显卡驱动是 9.1，需要重新安装 CUDA 9.1 版本。
 
-```bash
->conda install pytorch torchvision cuda90 -c pytorch
-Collecting package metadata (repodata.json): done
-Solving environment: done
+![cuda-v9.1](./images/cuda-v9.1.png)
 
-## Package Plan ##
-
-  environment location: C:\ProgramData\Anaconda3
-
-  added / updated specs:
-    - cuda90
-    - pytorch
-    - torchvision
-
-
-The following packages will be downloaded:
-
-    package                    |            build
-    ---------------------------|-----------------
-    cuda90-1.0                 |                0           2 KB  pytorch
-    ------------------------------------------------------------
-                                           Total:           2 KB
-
-The following NEW packages will be INSTALLED:
-
-  cuda90             pytorch/win-64::cuda90-1.0-0
-
-
-Proceed ([y]/n)? y
-
-
-Downloading and Extracting Packages
-cuda90-1.0           | 2 KB      | ############################################################################ | 100%
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
-```
+安装完之后，先把原先的 PyTorch 卸载，然后安装对应 CUDA `<=9.1` 版本的 PyTorch。
 
 管理员身份执行 `uninstall` 命令，将 pytorch 卸载：
 
@@ -302,12 +268,13 @@ Executing transaction: done
 conda uninstall pytorch
 ```
 
+
 之后安装 CUDA9.0 版本的 PyTorch：
+
 ```bash
 conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
 ```
 
-终于成功：
 
 ```bash
 Downloading and Extracting Packages
@@ -317,7 +284,11 @@ torchvision-0.3.0    | 2.3 MB    | #############################################
 Preparing transaction: done
 Verifying transaction: done
 Executing transaction: done
+```
 
+`done` 完成之后，直接上 python 脚本测试 CUDA 是否可用。
+
+```bash
 C:\WINDOWS\system32>python
 Python 3.7.0 (default, Jun 28 2018, 08:04:48) [MSC v.1912 64 bit (AMD64)] :: Anaconda, Inc. on win32
 Type "help", "copyright", "credits" or "license" for more information.
@@ -328,3 +299,15 @@ Type "help", "copyright", "credits" or "license" for more information.
 True
 >>>
 ```
+
+`torch.cuda.is_available()` 输出 True，说明 PyTorch 已经可以调用系统硬件资源了，安装成功！
+
+## 4. 总结
+- 使用 Anaconda，可以在 `.condarc` 下修改镜像源，或者直接搭梯子提升包下载速度。
+- CUDA 的安装，首先应该查看本机显卡驱动的版本号，之后再到 CUDA 官网选择对应的版本下载并安装。
+- PyTorch 安装时，指定 CUDA 的版本，保证 PyTorch 在该 CUDA 版本下能正常调用系统硬件资源进行并行计算。
+
+## 5. 参考资料
+- [PyTorch and CUDA 9.1](https://discuss.pytorch.org/t/pytorch-and-cuda-9-1/13126)
+- [PyTorch Start locally](https://pytorch.org/get-started/locally/)
+- [清华大学 Anaconda 镜像使用帮助](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/)
