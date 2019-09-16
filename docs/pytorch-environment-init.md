@@ -234,7 +234,7 @@ PyCharm 的下载请到：http://www.jetbrains.com/pycharm/download 页面。官
 
 
 ## 3. PyTorch 试运行
-我们在 PyCharm 中新建一个 Python 项目,命名随意，比如 `pytorch-practice`，在 `Existing Interpreter` 中点击 `...` 浏览目录，选择 `Conda Environment`，在右侧 `Interpreter` 中继续浏览目录，选择 `Anaconda` 中的 `python.exe` 文件，`ok` 即可创建新项目。
+我们在 PyCharm 中新建一个 Python 项目，命名随意，比如 `pytorch-practice`，在 `Existing Interpreter` 中点击 `...` 浏览目录，选择 `Conda Environment`，在右侧 `Interpreter` 中继续浏览目录，选择 `Anaconda` 中的 `python.exe` 文件，`ok` 即可创建新项目。
 
 在项目下新建 `main.py` 文件：
 
@@ -249,7 +249,8 @@ print('Is gpu available?:', torch.cuda.is_available())
 控制台打印出以下信息：
 
 ```bash
-
+PyTorch's Version:  1.1.0
+Is gpu available?: False
 ```
 
 发现 CUDA 并不可用。此时打开控制面板查看显卡驱动信息。
