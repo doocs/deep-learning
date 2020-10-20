@@ -1,7 +1,9 @@
 # PyTorch 环境准备
+
 请完整看完本文之后再进行操作，这样可以避免以下环境安装过程中遇到的一些坑。
 
 ## 1. 开发环境
+
 <table>
   <thead>
     <tr>
@@ -38,9 +40,10 @@
     </tr>
 </table>
 
-
 ## 2. 开始安装
+
 ### 2.1 Anaconda
+
 Anaconda 的下载地址：https://repo.anaconda.com/archive/Anaconda3-2019.07-Windows-x86_64.exe
 
 下载完成后，双击运行安装。安装过程中，会提示是否将 `Anaconda` 添加到环境变量，建议**勾选**，方便后面的操作。
@@ -84,6 +87,7 @@ conda 4.7.11
 命令成功执行，说明 Anaconda 安装好了。
 
 ### 2.2 CUDA
+
 接下来我们安装 CUDA。
 
 **注意**，CUDA 只能运行在 NVIDIA 显卡上，因此，在进行 `DeepLearning` 学习的时候，请确保有一张 NVIDIA 显卡。
@@ -112,8 +116,8 @@ Cuda compilation tools, release 10.1, V10.1.243
 
 以上说明 CUDA 已成功安装。
 
-
 ### 2.3 PyTorch
+
 接下来安装 PyTorch。
 
 到 PyTorch 官网：https://pytorch.org/
@@ -230,10 +234,11 @@ Executing transaction: done
 ```
 
 ### 2.4 PyCharm
+
 PyCharm 的下载请到：http://www.jetbrains.com/pycharm/download 页面。官方提供了 `Professional` 收费版和 `Community` 免费版，可以选择 `Community` 版本，之后下载安装即可。
 
-
 ## 3. PyTorch 试运行
+
 我们在 PyCharm 中新建一个 Python 项目，命名随意，比如 `pytorch-practice`，在 `Existing Interpreter` 中点击 `...` 浏览目录，选择 `Conda Environment`，在右侧 `Interpreter` 中继续浏览目录，选择 `Anaconda` 中的 `python.exe` 文件，`ok` 即可创建新项目。
 
 在项目下新建 `main.py` 文件：
@@ -269,13 +274,11 @@ Is gpu available?: False
 conda uninstall pytorch
 ```
 
-
 之后安装 CUDA9.0 版本的 PyTorch：
 
 ```bash
 conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
 ```
-
 
 ```bash
 Downloading and Extracting Packages
@@ -304,11 +307,13 @@ True
 `torch.cuda.is_available()` 输出 True，说明 PyTorch 已经可以调用系统硬件资源了，安装成功！
 
 ## 4. 总结
+
 - 使用 Anaconda，可以在 `.condarc` 下修改镜像源，或者直接搭梯子提升包下载速度。
 - CUDA 的安装，首先应该查看本机显卡驱动的版本号，之后再到 CUDA 官网选择对应的版本下载并安装。
 - PyTorch 安装时，指定 CUDA 的版本，保证 PyTorch 在该 CUDA 版本下能正常调用系统硬件资源进行并行计算。
 
 ## 5. 参考资料
+
 - [PyTorch and CUDA 9.1](https://discuss.pytorch.org/t/pytorch-and-cuda-9-1/13126)
 - [PyTorch Start locally](https://pytorch.org/get-started/locally/)
 - [清华大学 Anaconda 镜像使用帮助](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/)
