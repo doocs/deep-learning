@@ -1,6 +1,6 @@
 # 深度学习
 
-[![license](https://badgen.net/github/license/doocs/deep-learning?color=green)](https://github.com/doocs/deep-learning/blob/master/LICENSE)
+[![license](https://badgen.net/github/license/doocs/deep-learning?color=green)](https://github.com/doocs/deep-learning/blob/main/LICENSE)
 [![stars](https://badgen.net/github/stars/doocs/deep-learning)](https://github.com/doocs/deep-learning/stargazers)
 [![issues](https://badgen.net/github/open-issues/doocs/deep-learning)](https://github.com/doocs/deep-learning/issues)
 [![PRs Welcome](https://badgen.net/badge/PRs/welcome/green)](http://makeapullrequest.com)
