@@ -13,3 +13,5 @@
 - [PyTorch v1.2 环境安装与试运行](docs/pytorch-environment-init.md)
 
 ## TensorFlow 实战
+
+- [TensorFlow 2.0 环境安装与试运行](docs/tensorflow2-env-init.md)
