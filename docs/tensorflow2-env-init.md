@@ -118,46 +118,41 @@ Cuda compilation tools, release 10.1, V10.1.243
 
 ### 2.3 TensorFlow2
 
+由于在 `conda` 安装好之后，默认的镜像是官方的，由于官方镜像在境外，访问太慢或者不能访问，为了加快访问的速度，可以重新配置为“清华”的镜像。
 
-由于在 ```conda``` 安装好之后，默认的镜像是官方的，由于官方镜像在境外，访问太慢或者不能访问，为了加快访问的速度，可以重新配置为“清华”的镜像。
-
-- 更改包的下载来源：您只需要在您的```conda```命令行中执行此命令便会轻松简单的将您的下载源更改为国内的清华源：
+- 更改包的下载来源：您只需要在您的`conda`命令行中执行此命令便会轻松简单的将您的下载源更改为国内的清华源：
 
 ```bash
 conda config --add channels http://mirros.tuna.tsinghua.edu.cn/pkgs/free
 conda config --set show_channel_urls yes
 ```
 
-
-
 接下来安装 TensorFlow。
 
 如果您想查看更多的信息请您移步到到 TensorFlow 中国官网：https://tensorflow.google.cn/
 
-目前 TensorFlow2 已经支持一个库覆盖GPU + CPU + TPU的同时实现，所以您只需要安装TensorFlow这一个包即可使用TPU/GPU/CPU进行网络搭建和神经网络训练。
-
+目前 TensorFlow2 已经支持一个库覆盖 GPU + CPU + TPU 的同时实现，所以您只需要安装 TensorFlow 这一个包即可使用 TPU/GPU/CPU 进行网络搭建和神经网络训练。
 
 - 接下来您需要创建虚拟环境用来（当然如果您想的话）：
 
-
-  (里是创建一个名字为tensorflow,python版本为3.7的虚拟环境用来安装tensorflow)
+  (里是创建一个名字为 tensorflow,python 版本为 3.7 的虚拟环境用来安装 tensorflow)
 
 ```bash
 conda create -n tensorflow python=3.7 # 这里的tensorflow是您的环境名称，python后面的的是您创建的tensorflow的虚拟环境的python的版本
 ```
-- 接下来就按照步骤进行环境的配置，如果弹出选项选择y即可
+
+- 接下来就按照步骤进行环境的配置，如果弹出选项选择 y 即可
 
 ![](./images/env.png)
 
 ![](./images/env2.png)
 
-- 激活您的虚拟环境，并安装tensorflow
+- 激活您的虚拟环境，并安装 tensorflow
+
 ```
 activate tensorflow #这里的tensorflow是您创建的虚拟环境的名称
 pip install tensorflow # 安装tensorflow主体
 ```
-
-
 
 ### 2.4 PyCharm
 
@@ -185,7 +180,8 @@ print('Is gpu available?:{}'.format(device))
 TF's Version:  2.8.0
 Is gpu available?: True
 ```
-- 如果您想查看Tensorflow对GPU的支持情况请参照TensorFlow官方的GPU支持:https://tensorflow.google.cn/install/gpu
+
+- 如果您想查看 Tensorflow 对 GPU 的支持情况请参照 TensorFlow 官方的 GPU 支持:https://tensorflow.google.cn/install/gpu
 
 最后祝您使用愉快！！
 
@@ -193,6 +189,7 @@ Is gpu available?: True
 
 - 使用 Anaconda，可以在 `.condarc` 下修改镜像源，或者直接搭梯子提升包下载速度。
 - CUDA 的安装，首先应该查看本机显卡驱动的版本号，之后再到 CUDA 官网选择对应的版本下载并安装。
+
 ## 5. 参考资料
 
 - [Tensorflow Start install](https://tensorflow.google.cn/install)
