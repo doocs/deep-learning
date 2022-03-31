@@ -1,4 +1,4 @@
-# PyTorch 环境准备
+# TensorFlow 环境准备
 
 请完整看完本文之后再进行操作，这样可以避免以下环境安装过程中遇到的一些坑。
 
@@ -28,7 +28,7 @@
     </tr>
     <tr>
       <td align="center">3</td>
-      <td align="center">PyTorch</td>
+      <td align="center">Tensorflow</td>
       <td align="center"><div align="center"><img width="200px" src="./images/tensorflow.png"></img></div></td>
       <td align="center">深度学习框架</td>
     </tr>
@@ -147,9 +147,9 @@ conda create -n tensorflow python=3.7 # 这里的tensorflow是您的环境名称
 ```
 - 接下来就按照步骤进行环境的配置，如果弹出选项选择y即可
 
-![](../../Downloads/env.png)
+![](./images/env.png)
 
-![](../../Downloads/env2.png)
+![](./images/env2.png)
 
 - 激活您的虚拟环境，并安装tensorflow
 ```
