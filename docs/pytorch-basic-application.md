@@ -98,7 +98,7 @@ torchvision.utils.data.DataLoader(
 ## 4.网络结构搭建
 1998年由*Lecun , Bottou , et al* 在论文 ***Gradient-based learning applied to document recognition***提出了一种用于手写字符识别的卷积神经网络——LeNet-5。除去输入层外，其拥有7层结构：
 
-![LeNet-5](./images/Lenet-5.jpg)
+![LeNet-5](./images/LeNet-5.jpg)
 
 ```python
 import torch
