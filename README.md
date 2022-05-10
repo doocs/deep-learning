@@ -16,3 +16,9 @@
 ## TensorFlow 实战
 
 - [TensorFlow 2.0 环境安装与试运行](docs/tensorflow2-env-init.md)
+
+## 贡献者
+
+感谢以下所有朋友对本项目的贡献！
+
+<a href="https://github.com/doocs/deep-learning/graphs/contributors" target="_blank"><img src="https://contrib.rocks/image?repo=doocs/deep-learning&max=500" /></a>
