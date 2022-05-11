@@ -1,10 +1,10 @@
-# Pytorch 自定义Dataset
+# Pytorch 自定义 Dataset
 
-> 在上节中我们使用了Pytorch自带的`torchvision.dataset`中的数据集，可是如果我们的数据集是自己做的或者从其他地方下载的数据集时怎么办？那么我们就需要自定义自己的`Dataset`数据集。
+> 在上节中我们使用了 Pytorch 自带的`torchvision.dataset`中的数据集，可是如果我们的数据集是自己做的或者从其他地方下载的数据集时怎么办？那么我们就需要自定义自己的`Dataset`数据集。
 
 ## 1.torch.utils.data.Dataset
 
-`torch.utils.data.Dataset`是Pytorch为用户自定义数据集所设计的基类，当我们继承该类时需要完成三个函数的重载：
+`torch.utils.data.Dataset`是 Pytorch 为用户自定义数据集所设计的基类，当我们继承该类时需要完成三个函数的重载：
 
 - `__init__()` : 初始化函数。
 - `__len__()` ：该方法返回数据集的大小。
@@ -14,7 +14,7 @@
 
 ## 2.数据集介绍
 
-本节数据集为论文 [*Hybrid LSTM and Encoder–Decoder Architecture for Detection of Image Forgeries*](https://ieeexplore.ieee.org/abstract/document/8626149) 和 [*Two-stream encoder–decoder network for localizing image forgeries*](https://www.sciencedirect.com/science/article/pii/S1047320321002777) 所提供的图像数据集。其中包括6万张被篡改的图像和对应的篡改掩码标签图像。文件结构如下：
+本节数据集为论文 [_Hybrid LSTM and Encoder–Decoder Architecture for Detection of Image Forgeries_](https://ieeexplore.ieee.org/abstract/document/8626149) 和 [_Two-stream encoder–decoder network for localizing image forgeries_](https://www.sciencedirect.com/science/article/pii/S1047320321002777) 所提供的图像数据集。其中包括 6 万张被篡改的图像和对应的篡改掩码标签图像。文件结构如下：
 
 ```bash
 Dataset\
@@ -65,7 +65,7 @@ class Imgdata(Dataset):
             * train : 是否为训练集
             * pct : 训练集占比
             可以自定义需要的参数，一般包括：数据集路径、transform方法、测试集/训练集标识符、训练集占比.
-        
+
         Return:
             * None
         '''
@@ -115,7 +115,7 @@ class Imgdata(Dataset):
             * None
 
         Return :
-            * (int) 数据集大小 
+            * (int) 数据集大小
 
         '''
         return len(self.images)
@@ -170,7 +170,7 @@ data_train = DataLoader(data_train, batch_size=8, shuffle=True)
 data_test  = DataLoader(data_test,  batch_size=8, shuffle=True)
 ```
 
-此时我们就完成了自定义数据集的加载。当我们使用迭代对象时，迭代对象将返回N+1个数据，其中N个数据是你在`Dataset`中`__getitem__()`函数中返回的数据的种类，在本节中`N=2`，还有一个参数则是`batch_idex`，是`batch`的索引号代表这是第几个`batch`。
+此时我们就完成了自定义数据集的加载。当我们使用迭代对象时，迭代对象将返回 N+1 个数据，其中 N 个数据是你在`Dataset`中`__getitem__()`函数中返回的数据的种类，在本节中`N=2`，还有一个参数则是`batch_idex`，是`batch`的索引号代表这是第几个`batch`。
 
 ```python
 for batch_idx, (img,laber) in enumerate(data_train):
@@ -179,12 +179,12 @@ for batch_idx, (img,laber) in enumerate(data_train):
 
 请注意，迭代器返回数据的的顺序如下:
 
-- batch_index 先返回batch的索引号。
+- batch_index 先返回 batch 的索引号。
 - 之后按`__getitem__()`中`return`的顺序，在本节中为：
-    - image
-    - laber
+  - image
+  - laber
 
-如果你有特殊的需求，比如你不仅想返回`image`和`laber`，你还想返回`image`中的R、G、B三个通道，那么就可以修改如下:
+如果你有特殊的需求，比如你不仅想返回`image`和`laber`，你还想返回`image`中的 R、G、B 三个通道，那么就可以修改如下:
 
 ```python
 # Dataset中的修改
