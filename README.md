@@ -12,6 +12,7 @@
 
 - [PyTorch v1.2 环境安装与试运行](docs/pytorch-environment-init.md)
 - [Pytorch 简单实例](docs/pytorch-basic-application.md)
+- [Pytorch 自定义Dataset数据集](docs/pytorch-customize-dataset.md)
 
 ## TensorFlow 实战
 
